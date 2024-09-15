@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet" />
+    <link
+      href="https://www.nerdfonts.com/assets/css/webfont.css"
+      rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i, 600, 600,700"
+	  rel="stylesheet" />
+    <title>Jooj Test Page</title>
+  </head>
+
+  <body>
+
+    <!-- header -->
+    
+    <div id="header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <img class="logo" src="images/logo.png" alt="Logo" style="width:5%">
+        </nav>
+      </div>
+    </div>
+
+    <!-- about -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-column-1">
+            <img src="images/profile-pic.jpg" alt="Profile Picture">
+          </div>
+          <div class="about-column-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              I graduated with a master's degree in architecture restoration from University of Art, Tehran, Iran. I also have a bachelor's degree in materials-ceramic engineering from Iran University of Science and Technology. Having skills and talent in graphic and architecture, I am looking for positions as a graphist in architecture.
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab(event, 'education')">Education</p>
+              <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+              <p class="tab-links" onclick="opentab(event, 'skills')">Skills</p>
+            </div>
+
+            <!-- Tab content for Education -->
+            <div class="tab-contents active-tab" id="education">
+              <ul>
+                <li><i class="nf nf-fa-building_columns"></i> <span>M.A.</span> in Building and Urban Fabric's Restoration - Conservations and Restoration of Architectural Heritage
+                  <ul>
+                    <li><strong>Thesis Title:</strong> Comprehensive Conservation of the City Fortifications as Architectural Heritage; Case Study: Technological Study and Restoration of Meybod City Wall</li>
+                  </ul>
+                </li>
+                <li><i class="nf nf-fa-gear"></i> <span>B.Sc.</span> in Materials Engineering - Ceramic</li>
+              </ul>
+            </div>
+
+            <!-- Tab content for Experience -->
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Architectural Conservation Specialist</span>
+                  <ul>
+                    <li><strong>Lorem 1</strong></li>
+                    <li><strong>Lorem 2</strong></li>
+                    <li><strong>Lorem 3</strong></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Tab content for Skills -->
+            <div class="tab-contents" id="skills">
+              <ul>
+                <li><i class="nf nf-dev-photoshop"></i> Photoshop  <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-empty"></span></li>
+                <li>After Effects <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span></li>
+                <li>AutoCAD <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span></li>
+                <li>Revit <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span></li>
+                <li>InDesign <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span></li>
+                <li>Illustrator <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span> <span class="dot-filled"></span></li>
+              </ul>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      
+      function opentab(event, tabname) {
+      // Hide all tab contents and remove active-link class
+      for (let tablink of tablinks) {
+      tablink.classList.remove("active-link");
+      }
+      for (let tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab");
+      }
+
+      // Show the clicked tab and activate the correct tab-link
+      event.currentTarget.classList.add("active-link");
+      document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>
